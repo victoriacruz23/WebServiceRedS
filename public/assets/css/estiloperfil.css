@@ -1,0 +1,197 @@
+/*PUBLICACIONES*/
+
+.publicaciones{
+padding: 1000px;
+}
+
+section{
+    position:center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+section .piensas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.show .piensas{
+    display: none; 
+}
+
+section .piensas .piensas-img{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: rgba(54, 231, 187, 0.123);
+  padding: 2px;
+}
+
+.piensas .piensas-img img{
+    height: 80px;
+    width: 80;
+    object-fit: cover;
+    border-radius:50% ;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.piensas .nombre{
+    font-size: 22px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.piensas .boton{
+    display: flex;
+    padding: 12px 20px;
+    background: rgba(17, 19, 16, 0.815);
+    margin-top: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.piensas .boton:hover{
+    background: rgb(240, 146, 24);
+}
+
+.piensas .boton i{
+    color: #fff;
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+.piensas .boton button{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+}
+
+/*CIERRE (PRIMERA PARTE)*/
+
+
+/*SEGUNDA PARTE*/
+section .exteior-emergente{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0, 4);
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0, 1);
+    transform: scale(1.2);
+    transition: opacity 0.2s 0s ease-in-out,
+                transform  0.2s 0s ease-in-out;
+}
+
+section.show .exteior-emergente{
+    opacity: 10;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+
+section .ventana-dialogo{
+    padding: 30px;
+    max-width: 380px;
+    position: relative;
+    width: 100%;
+    background:rgba(218, 117, 22, 0.925);
+    border-radius: 12px;
+}
+
+.ventana-dialogo .cerrar{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: #070707;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+
+.ventana-dialogo .cerrar:hover{
+color: rgb(255, 255, 255);
+}
+
+section .ventana-dialogo .perfilu-texto{
+    display: flex;
+    align-items: center;
+}
+
+section .ventana-dialogo img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.perfilu-texto .texto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.perfilu-texto .texto .nombre{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+section .ventana-dialogo textarea{
+    min-height: 140px;
+    width: 100px;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    resize: none;
+    font-size: 16px;
+    font-weight: 500;
+    background: #c57a47af;
+}
+
+.ventana-dialogo .boton{
+    display: flex;
+    justify-content: flex-end;
+}
+.ventana-dialogo .boton button{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    background: #6f93f6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.boton button.cancel{
+    background: #f082ac;
+}
+
+.boton button.cancel:hover{
+    background: #ec5f95;
+}
+
+.boton button.send:hover{
+    background: #275df1;
+}
